@@ -1,0 +1,11 @@
+@import "../../../assets/base.scss";
+
+.button {
+    background-color: $violet;
+    padding: 15px;
+    width: 100%;
+    color: $white;
+    font-weight: bold;
+    border: 1px solid $grey;
+    cursor: pointer;
+}

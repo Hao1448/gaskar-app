@@ -1,0 +1,56 @@
+@import "../../assets/base.scss";
+
+.card {
+    width: 100%;
+    box-shadow: 0 0 10px $black;
+    .top {
+        grid-column: span 12;
+        background-image: url('../../assets/images/img_project.jpeg');
+        padding-top: 50%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        .top-row {
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            top: 20px;
+            left: 15px;
+            right: 15px;
+        }
+        .top-title {
+            position: absolute;
+            bottom: 20px;
+            left: 15px;
+            color: $white;
+        }
+    }
+    .card-branch {
+        padding: 3px 5px;
+        background-color: $white;
+        color: $violet_dark;
+        border-radius: 3px;
+    }
+    .card-status {
+        padding: 3px 5px;
+        background-color: $violet_dark;
+        color: $white;
+        border-radius: 3px;
+    }
+    .bottom {
+        grid-column: span 12;
+        padding: 10px 15px 15px;
+        .bottom-title {
+            color: $black;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+    }
+}
+.bottom-row {
+    color: $grey_dark;
+    & + & {
+        margin-top: 10px;
+    }
+}

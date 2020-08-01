@@ -1,0 +1,23 @@
+@import "../../assets/base.scss";
+
+.navMenu {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 72px 0;
+    box-sizing: border-box;
+    background: $violet_dark;
+    .navMenu_item {
+        width: 100%;
+        color: $white;
+        font-weight: 700;
+        cursor: pointer;
+        background: $violet_dark;
+        transition: background .2s;
+        padding: 10px 10px 10px 5px;
+        box-sizing: border-box;
+        &:hover {
+            background: $violet_darkest;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.widgetProjects {
+    padding: 10px;
+    .widgetProjects-top {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 20px;
+        .widgetProjects-title {
+            grid-column: 1 / span 6;
+            text-transform: uppercase;
+        }
+        .widgetProjects-button {
+            grid-column: 10 / span 2;
+        }
+    }
+    .widgetProjects-cards {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 20px;
+        .widgetProjects-cards_card {
+            grid-column: span 4;
+        }
+    }
+}

@@ -1,0 +1,56 @@
+@import "./assets/base.scss";
+@import "./assets/fonts.scss";
+    
+body {
+    font-family: $font_primary;
+    margin: 0;
+    .grid {
+        display: grid;
+        align-items: flex-start;
+        justify-content: flex-start;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 20px;
+    }
+}
+
+.home {
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(13, 1fr);
+    grid-gap: 20px;
+    .col {
+        grid-column: 6 / span 3;
+    }
+}
+.home_input {
+    & + & {
+        margin-top: 20px;
+    }
+}
+
+.projects {
+    min-height: 100vh;
+    display: flex;
+    .projects-grid {
+        height: 100%;
+        display: grid;
+        align-items: flex-start;
+        justify-content: flex-start;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 20px;
+        flex: 1;
+        min-height: 100vh;
+        .projects_col-menu {
+            height: 100vh;
+            grid-column: span 3;
+        }
+        .projects_col-main {
+            grid-column: span 9;
+            box-sizing: border-box;
+            overflow-y: scroll;
+        }
+    }
+}
+

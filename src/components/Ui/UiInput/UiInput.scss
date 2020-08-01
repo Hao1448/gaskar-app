@@ -1,0 +1,14 @@
+@import "../../../assets/base.scss";
+
+.input {
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid $grey;
+    &:hover, &:focus, &:active {
+        outline: none;
+    }
+}
+.title {
+    color: $grey_dark
+}
