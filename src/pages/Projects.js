@@ -1,6 +1,6 @@
 import React from 'react'
 import NavMenu from '../components/NavMenu'
-import { WidgetProjects } from '../components/WidgetProjects'
+import  WidgetProjects  from '../components/WidgetProjects'
 
 export const Projects = () => {
   return (
