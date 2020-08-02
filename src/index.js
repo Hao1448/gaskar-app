@@ -1,13 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import { render } from "react-dom";
+import { Provider } from "react-redux";
 
-ReactDOM.render(
-  <React.StrictMode>
+import { store } from "./_helpers";
+import App from "./App";
+
+// setup fake backend
+import { configureFakeBackend } from "./_helpers";
+configureFakeBackend();
+
+render(
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </Provider>,
+  document.getElementById("root")
 );
-
-serviceWorker.unregister();

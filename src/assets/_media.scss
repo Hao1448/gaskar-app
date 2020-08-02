@@ -1,0 +1,8 @@
+$breakpointSm: 640px;
+
+@media ( max-width: $breakpointSm ) {
+    .projects .projects-grid .projects_col-menu {
+        height: auto;
+        grid-column: span 12;
+    }    
+}

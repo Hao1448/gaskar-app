@@ -1,5 +1,6 @@
 @import "./assets/base.scss";
 @import "./assets/fonts.scss";
+
     
 body {
     font-family: $font_primary;
@@ -54,3 +55,4 @@ body {
     }
 }
 
+@import "./assets/_media.scss";
