@@ -1,6 +1,5 @@
 import React from 'react'
-import { UiInput }  from '../components/UiInput'
-// import { UiButton }  from '../components/UiButton'
+import { UiInput }  from '../components/Ui'
 import { UiButton }  from '../components/Ui'
 import '../index.scss'
 
