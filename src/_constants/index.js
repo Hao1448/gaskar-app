@@ -16,5 +16,6 @@ const userConstants = {
     GETALL_FAILURE: 'USERS_GETALL_FAILURE',
 };
 
+const ADD_PROJECT = 'ADD_PROJECT';
 
-export { userConstants, alertConstants } 
+export { userConstants, alertConstants, ADD_PROJECT } 
