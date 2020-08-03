@@ -1,14 +1,21 @@
 @import "../../../assets/base.scss";
+@import "../../../assets/_mixins.scss";
 
 .input {
+    @include p_large;
     padding: 15px;
     width: 100%;
     box-sizing: border-box;
-    border: 1px solid $grey;
+    border: 1px solid $grey_light;
+    &::placeholder {
+        color: $grey_light;
+      }
     &:hover, &:focus, &:active {
         outline: none;
     }
 }
 .title {
-    color: $grey_dark
+    @include p_small;
+    color: $grey_dark;
+    padding: 0 0 10px 10px;
 }
