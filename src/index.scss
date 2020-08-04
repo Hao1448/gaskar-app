@@ -13,6 +13,11 @@ body {
         grid-template-columns: repeat(12, 1fr);
         grid-gap: 20px;
     }
+    .alert-danger {
+        @include p_large;
+        text-align: center;
+        color: $violet;
+    }
 }
 
 .login {
@@ -25,26 +30,37 @@ body {
     .login-col {
         grid-column: 6 / span 3;
     }
+    @media ( max-width: $breakpointSm ) {
+        .login-col {
+            height: auto;
+            grid-column: 2 / span 11;
+        }   
+    }
     .login-checkbox {
         @include p;
-        margin: 10px 0;
+        margin: 15px 0;
         display: flex;
         align-items: center;
         input {
             margin-right: 10px;
         }
     }
-
+    .forgotText {
+        @include p_small;
+        cursor: pointer;
+        color: $violet;
+        margin-top: 15px;
+    }
     input[type="checkbox"] {
         display: none;
     }
-    .input:checked {
-        content: '\2714';
+    input[type="checkbox"]:checked + span:before {
+        content: '\2713';
         font-size: 14px;
         position: absolute;
         top: 0px;
-        left: 3px;
-        color: #99a1a7;
+        left: 4px;
+        color: $white;
     }
     span {
         height: 18px;
@@ -87,5 +103,3 @@ body {
         }
     }
 }
-
-@import "./assets/_media.scss";
