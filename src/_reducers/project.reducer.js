@@ -9,7 +9,7 @@ const Projects = [
         admin: 'Гросолим Лимитед'
     }
 ] 
-const projects = (state = Projects, {id, name, duration, leader, admin, type}) => {
+const projects = (state = Projects, { name, duration, leader, admin, type}) => {
     switch(type) {
         case ADD_PROJECT : 
         return [
