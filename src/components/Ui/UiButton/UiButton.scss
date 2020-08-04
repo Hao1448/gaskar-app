@@ -5,7 +5,14 @@
     padding: 15px;
     width: 100%;
     color: $white;
-    font-weight: bold;
     border: 1px solid $grey;
+    font-weight: bold;
     cursor: pointer;
+    transition: background .2s;
+    &:hover {
+        background: $violet_dark;
+    }
+    &:focus {
+       outline: 0;
+    }
 }
