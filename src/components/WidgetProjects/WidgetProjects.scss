@@ -10,6 +10,9 @@
         }
         .widgetProjects-button {
             grid-column: 10 / span 2;
+            .widgetProjects-modal {
+                text-align: center;
+            }
         }
     }
     .widgetProjects-cards {
