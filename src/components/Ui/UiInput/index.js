@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import './UiInput.scss'
 
 
-export const UiInput = ({value, type, onChange, name, placeholder}) => {
+export const UiInput = ({ type, onChange, name, placeholder }) => {
     return (
         <Fragment>
             <div className="title">{placeholder}</div>
