@@ -96,10 +96,21 @@ body {
             height: 100vh;
             grid-column: span 3;
         }
+        @media ( max-width: $breakpointSm ) {
+            .projects_col-menu {
+                height: auto;
+                grid-column: span 12;
+            }   
+        }
         .projects_col-main {
             grid-column: span 9;
             box-sizing: border-box;
             overflow-y: scroll;
+        }
+        @media ( max-width: $breakpointSm ) {
+            .projects_col-main {
+                grid-column: span 12;
+            }   
         }
         .projects-header {
             display: flex;
@@ -107,11 +118,21 @@ body {
             padding: 10px;
             background-color: $grey_lightest;
         }
+        @media ( max-width: $breakpointSm ) {
+            .projects-header {
+                padding: 20px;
+            }   
+        }
         .projects-title {
             @include h1;
             text-transform: uppercase;
             color: $violet_darkest;
             padding: 30px;
         }
+    }
+    @media ( max-width: $breakpointSm ) {
+        .projects-grid {
+            min-height: auto;
+        }   
     }
 }
