@@ -46,11 +46,33 @@
             text-transform: uppercase;
             margin-bottom: 15px;
         }
+        .bottom-item {
+            color: $grey_dark;
+        }
+        .bottom-persons {
+            display: flex;
+        }
+        .bottom-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 }
 .bottom-row {
-    color: $grey_dark;
+    & + & {
+        margin-top: 40px;
+    }
+}
+
+.bottom-item { 
     & + & {
         margin-top: 10px;
     }
 }
+.bottom-person { 
+    & + & {
+        margin-left: 5px;
+    }
+}
+
