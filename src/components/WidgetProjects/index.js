@@ -68,26 +68,40 @@ class WidgetProjects extends React.Component {
                             isOpen={this.state.showModal}
                             style={customStyles}
                         >
-                            <button onClick={this.handleCloseModal}>Закрыть</button>
                             <form onSubmit={this.submitHandler} className="widget-modal">
-                                Добавить проект
-                                <UiInput name="name" placeholder="Название проекта" />
-                                <UiInput name="duration" placeholder="Даты выполнения" />
-                                <UiInput name="leader" placeholder="Руководитель проекта" />
-                                <UiInput name="admin" placeholder="Администратор проекта" />
-                                <UiButton type="submit" value="Создать проект" />
+                                <div className="widget-modal_top"> 
+                                    <div className="widget-modal_title">Добавить проект</div>
+                                    <button onClick={this.handleCloseModal}>Закрыть</button>
+                                </div>
+                                <div className="widget-modal_input">
+                                    <UiInput name="name" placeholder="Название проекта" />
+                                </div>
+                                <div className="widget-modal_input">
+                                    <UiInput name="duration" placeholder="Даты выполнения" />
+                                </div>
+                                <div className="widget-modal_input">
+                                    <UiInput name="leader" placeholder="Руководитель проекта" />
+                                </div>
+                                <div className="widget-modal_input ">
+                                    <UiInput name="admin" placeholder="Администратор проекта" />
+                                </div>
+                                <div className="widget-modal_button">
+                                    <UiButton type="submit" value="Создать проект" />
+                                </div>
                             </form>
                         </Modal>
                     </div>
                 </div>
-                { projects.map((project) => 
+               
                     <div className="widgetProjects-cards">
+                    { projects.map((project) => 
                         <div className="widgetProjects-cards_card">
                             <CardProject project={project}/>
                         </div>
-                    </div>
-                    )
+                        )
                 }
+                    </div>
+                  
             </div>
         )
     }
