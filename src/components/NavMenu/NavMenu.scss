@@ -8,8 +8,9 @@
     padding: 72px 0;
     box-sizing: border-box;
     background: $violet_dark;
-    .navMenu_item {
+    .navMenu-item {
         @include p_large;
+        text-decoration: 'none';
         display: flex;
         align-items: center;
         width: 100%;
@@ -20,11 +21,11 @@
         transition: background .2s, border-left .2s;
         padding: 10px;
         box-sizing: border-box;
-        &:hover {
+        &:hover, &:focus, &:active {
             background: $violet_darkest;
             border-left: 10px solid $violet;
         }
-        .navMenu_item-icon {
+        .navMenu-item_icon {
             width: 20px;
             height: 20px;
             margin-right: 10px;
@@ -33,15 +34,23 @@
             background-size: contain;
             background-repeat: no-repeat;
         }
-        .navMenu_item-num {
+        .navMenu-item_num {
             @include p;
             color: $grey;
             margin-left: 5px;
         }
     }
 }
-.navMenu_item {
+a {
+   
     & + & {
         margin-top: 10px;
     }
+}
+
+
+.navMenu-item_active {
+    background: $violet_darkest !important;
+    border-left: 10px solid $violet;
+    text-decoration: none;
 }
