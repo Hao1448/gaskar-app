@@ -1,0 +1,33 @@
+@import '../../../assets/base.scss';
+@import '../../../assets/_mixins.scss';
+
+.tabs {
+    overflow-x: auto;
+    .tabs-items {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+        border-bottom: 2px solid $grey;
+        .tabs-items_item {
+            @include p_large;
+            display: inline-block;
+            padding: 10px 20px;
+            text-align: center;
+            white-space: nowrap;
+            color: $grey;
+            cursor: pointer;
+            text-transform: uppercase;
+            &:hover, &:focus, &:active {
+                color: $black;
+                border-bottom: 4px solid $violet_dark;
+            }
+        }
+        .active {
+            color: $black;
+            border-bottom: 4px solid $violet_dark;
+        }
+    }
+}
+
+
