@@ -45,20 +45,7 @@ class WidgetProjects extends React.Component {
     render () {
         const { projects } = this.props;
 
-        const customStyles = {
-            overlay: {
-                display: 'grid',
-                gridTemplateColumns: 'repeat(12, 1fr)',
-                gridGap: '20px'
-            },
-            content : {
-                position: 'relative',
-                gridColumn: '4 / span 5',
-                alignSelf: 'center'
-            }
-          }
-        return (
-         
+        return (    
             <div className="widgetProjects">
                 <div className="widgetProjects-top">
                     <div className="widgetProjects-title">список проектов</div>
@@ -66,7 +53,8 @@ class WidgetProjects extends React.Component {
                         <UiButton onClick={this.handleOpenModal} value="Добавить проект"/>
                         <Modal 
                             isOpen={this.state.showModal}
-                            style={customStyles}
+                            className="widget-modal"
+                            overlayClassName="widget-overlay"
                         >
                             <form onSubmit={this.submitHandler} className="widget-modal">
                                 <div className="widget-modal_top"> 
