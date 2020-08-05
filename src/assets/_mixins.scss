@@ -10,3 +10,11 @@
     font-size: 16px;
     line-height: 20px;
 }
+@mixin h1 {
+    font-size: 38px;
+    line-height: 44px;
+}
+@mixin h2 {
+    font-size: 22px;
+    line-height: 28px;
+}
