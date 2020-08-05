@@ -1,3 +1,5 @@
+@import "../../assets/base.scss";
+
 .image {
     background-image: url('../../assets/images/img_profile.png');
     background-position: center;
@@ -6,4 +8,10 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
+}
+@media ( max-width: $breakpointSm ) {
+    .image {
+        width: 40px;
+        height: 40px;
+    }   
 }
