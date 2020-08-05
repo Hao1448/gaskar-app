@@ -10,15 +10,27 @@
         margin-bottom: 40px;
         .widgetProjects-title {
             @include h2;
-            color: $grey_dark;
-            grid-column: 1 / span 6;
+            grid-column: span 6;
+            align-self: center;
+            color: $grey_dark;     
             text-transform: uppercase;
+        }
+        @media ( max-width: $breakpointSm ) {
+            .widgetProjects-title {
+                grid-column: span 12;
+                text-align: center;
+            }   
         }
         .widgetProjects-button {
             grid-column: 11 / span 2;
             .widgetProjects-modal {
                 text-align: center;
             }
+        }
+        @media ( max-width: $breakpointSm ) {
+            .widgetProjects-button {
+                grid-column: 2 / span 10;
+            }   
         }
     }
     .widgetProjects-cards {
@@ -28,10 +40,24 @@
         .widgetProjects-cards_card {
             grid-column: span 4;
         }
+        @media ( max-width: $breakpointSm ) {
+            .widgetProjects-cards_card {
+                grid-column: span 12;
+            }   
+        }
     }
 }
 
 .widget-modal {
+    position: relative;
+    border: $grey_lightest;
+    background: $grey_lightest;
+    overflow: auto;
+    border-radius: 4px;
+    outline: none;
+    padding: 20px;
+    grid-column: 4 / span 5;
+    align-self: center;
     .widget-modal_top{
         display: flex;
         justify-content: space-between;
@@ -42,4 +68,21 @@
     .widget-modal_button {
         margin-top: 20px;
     }
+}
+@media ( max-width: $breakpointSm ) {
+    .widget-modal {
+        grid-column: span 12;
+    }   
+}
+
+.widget-overlay {
+    position: fixed;
+    top: 0px;
+    left: 20px;
+    right: 20px;
+    bottom: 0px;
+    background-color: rgba(255, 255, 255, 0.75);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
 }
