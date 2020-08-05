@@ -2,6 +2,9 @@ import React, { Fragment } from 'react'
 import { Route, Router } from 'react-router-dom'
 import { LoginPage } from './pages/LoginPage'
 import { Projects } from './pages/Projects'
+import { Tasks } from './pages/Tasks'
+import { Calendar } from './pages/Calendar'
+import { Opportunities } from './pages/Opportunities'
 import { connect } from 'react-redux';
 import { history } from './_helpers';
 import { alertActions } from './_actions';
@@ -26,10 +29,11 @@ class App extends React.Component {
                     <div className={`alert ${alert.type}`}>{alert.message}</div>
                 }
                 <Router history={history}>
-                    <div>
-                        <Route exact path="/" component={LoginPage} />
-                        <PrivateRoute component={Projects} path="/projects" />
-                    </div>
+                    <Route exact path="/" component={LoginPage} />
+                    <PrivateRoute component={Projects} path="/projects" />
+                    <PrivateRoute component={Tasks} path="/tasks" />
+                    <PrivateRoute component={Calendar} path="/calendar" />
+                    <PrivateRoute component={Opportunities} path="/opportunities" />  
                 </Router>
             </Fragment>
         );
