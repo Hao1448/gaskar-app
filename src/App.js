@@ -23,6 +23,7 @@ class App extends React.Component {
 
   render() {
     const { alert } = this.props;
+    console.log(localStorage)
         return (
             <Fragment>
                 {alert.message &&
