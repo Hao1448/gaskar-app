@@ -23,10 +23,24 @@
                 border-bottom: 4px solid $violet_dark;
             }
         }
+        @media ( max-width: $breakpointSm ) {
+            .tabs-items_item  {
+                border-bottom: 2px solid $grey;
+                &:hover, &:focus, &:active {
+                    color: $black;
+                    border-bottom: 2px solid $violet_dark;
+                }
+            }   
+        }
         .active {
             color: $black;
             border-bottom: 4px solid $violet_dark;
         }
+    }
+    @media ( max-width: $breakpointSm ) {
+        .tabs-items  {
+            border-bottom: none;
+        }   
     }
 }
 
