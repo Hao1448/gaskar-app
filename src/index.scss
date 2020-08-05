@@ -89,7 +89,7 @@ body {
         align-items: flex-start;
         justify-content: flex-start;
         grid-template-columns: repeat(12, 1fr);
-        grid-gap: 20px;
+        grid-gap: 0px;
         flex: 1;
         min-height: 100vh;
         .projects_col-menu {
@@ -100,6 +100,18 @@ body {
             grid-column: span 9;
             box-sizing: border-box;
             overflow-y: scroll;
+        }
+        .projects-header {
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px;
+            background-color: $grey_lightest;
+        }
+        .projects-title {
+            @include h1;
+            text-transform: uppercase;
+            color: $violet_darkest;
+            padding: 30px;
         }
     }
 }
