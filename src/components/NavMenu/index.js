@@ -4,10 +4,23 @@ import './NavMenu.scss'
 const NavMenu = () => {
     return (
         <div className='navMenu'>
-            <div className='navMenu_item'>Задачи и работы</div>
-            <div className='navMenu_item'>Проекты</div>
-            <div className='navMenu_item'>Календарь</div>
-            <div className='navMenu_item'>Возможности</div>
+            <div className='navMenu_item'>
+                <div className="navMenu_item-icon"/>
+                Задачи и работы
+                <div className="navMenu_item-num">3</div>
+            </div>
+            <div className='navMenu_item'>
+                <div className="navMenu_item-icon"/>
+                Проекты
+            </div>
+            <div className='navMenu_item'>
+                <div className="navMenu_item-icon"/>
+                Календарь
+            </div>
+            <div className='navMenu_item'>
+                <div className="navMenu_item-icon"/>
+                Возможности
+            </div>
         </div>
     )
 }
