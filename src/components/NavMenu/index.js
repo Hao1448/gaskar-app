@@ -1,26 +1,27 @@
 import React from 'react'
+import {  NavLink } from 'react-router-dom';
 import './NavMenu.scss'
 
 const NavMenu = () => {
     return (
         <div className='navMenu'>
-            <div className='navMenu_item'>
-                <div className="navMenu_item-icon"/>
+            <NavLink to="/tasks" style={{ textDecoration: 'none' }} activeClassName='navMenu-item_active' className="navMenu-item"> 
+                <div className="navMenu-item_icon"/>
                 Задачи и работы
-                <div className="navMenu_item-num">3</div>
-            </div>
-            <div className='navMenu_item'>
-                <div className="navMenu_item-icon"/>
+                <div className="navMenu-item_num">3</div>
+            </NavLink>
+            <NavLink to="/projects" style={{ textDecoration: 'none' }} activeClassName='navMenu-item_active' className="navMenu-item">
+                <div className="navMenu-item_icon"/>
                 Проекты
-            </div>
-            <div className='navMenu_item'>
-                <div className="navMenu_item-icon"/>
+            </NavLink>
+            <NavLink to="/calendar" style={{ textDecoration: 'none' }} activeClassName='navMenu-item_active' className="navMenu-item">
+                <div className="navMenu-item_icon"/>
                 Календарь
-            </div>
-            <div className='navMenu_item'>
-                <div className="navMenu_item-icon"/>
+            </NavLink>
+            <NavLink to="/opportunities" style={{ textDecoration: 'none' }} activeClassName='navMenu-item_active' className="navMenu-item">
+                <div className="navMenu-item_icon"/>
                 Возможности
-            </div>
+            </NavLink>
         </div>
     )
 }
