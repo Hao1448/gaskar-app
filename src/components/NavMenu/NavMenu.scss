@@ -48,3 +48,10 @@
     border-left: 10px solid $violet;
     text-decoration: none;
 }
+
+@media ( max-width: $breakpointSm ) {
+    .navMenu {
+        min-height: auto;
+        padding: 20px 0;
+    }   
+}
