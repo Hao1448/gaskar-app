@@ -24,19 +24,23 @@ class WidgetProjects extends React.Component {
     }
     
     handleCloseModal () {
-      this.setState({ showModal: false });
+        this.setState({ showModal: false });
     }
 
     submitHandler (event) {
-        event.preventDefault()
+        event.preventDefault();
+        const { name, duration, leader, admin } = event.target.elements;
         const newProject = {
-            name,
-            duration,
-            leader,
-            admin
-        }
-        this.props.addProject({newProject})
+            name: name.value,
+            duration: duration.value,
+            leader: leader.value,
+            admin: admin.value,
+        };
+        this.props.addProject(newProject);
+        this.setState({ showModal: false });
     }
+
+    
 
     render () {
         const { projects } = this.props;
@@ -53,7 +57,6 @@ class WidgetProjects extends React.Component {
                 alignSelf: 'center'
             }
           }
-          console.log(this.props)
         return (
          
             <div className="widgetProjects">
@@ -68,11 +71,11 @@ class WidgetProjects extends React.Component {
                             <button onClick={this.handleCloseModal}>Закрыть</button>
                             <form onSubmit={this.submitHandler} className="widget-modal">
                                 Добавить проект
-                                <UiInput placeholder="Название проекта"/>
-                                <UiInput placeholder="Даты выполнения"/>
-                                <UiInput placeholder="Руководитель проекта"/>
-                                <UiInput placeholder="Администратор проекта"/>
-                                <UiButton type="submit" value="Создать проект"/>
+                                <UiInput name="name" placeholder="Название проекта" />
+                                <UiInput name="duration" placeholder="Даты выполнения" />
+                                <UiInput name="leader" placeholder="Руководитель проекта" />
+                                <UiInput name="admin" placeholder="Администратор проекта" />
+                                <UiButton type="submit" value="Создать проект" />
                             </form>
                         </Modal>
                     </div>
