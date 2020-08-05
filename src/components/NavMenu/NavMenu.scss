@@ -19,7 +19,7 @@
         cursor: pointer;
         background: $violet_dark;
         transition: background .2s, border-left .2s;
-        padding: 10px;
+        padding: 15px;
         box-sizing: border-box;
         &:hover, &:focus, &:active {
             background: $violet_darkest;
@@ -39,12 +39,6 @@
             color: $grey;
             margin-left: 5px;
         }
-    }
-}
-a {
-   
-    & + & {
-        margin-top: 10px;
     }
 }
 
