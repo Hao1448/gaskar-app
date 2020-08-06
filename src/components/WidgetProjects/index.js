@@ -44,7 +44,6 @@ class WidgetProjects extends React.Component {
 
     render () {
         const { projects } = this.props;
-
         return (    
             <div className="widgetProjects">
                 <div className="widgetProjects-top">
