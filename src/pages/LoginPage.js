@@ -61,7 +61,7 @@ class LoginPage extends React.Component {
                         <label className="login-checkbox">
                             <input type="checkbox" id="scales" name="scales"/>
                             <span></span>
-                            <label forHtml="scales">Запомнить пароль</label>
+                            <label forhtml="scales">Запомнить пароль</label>
                         </label>
                         <UiButton value="Войти"/>
                         <div className="forgotText">Забыли пароль?</div>
