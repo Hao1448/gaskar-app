@@ -35,6 +35,7 @@ class WidgetProjects extends React.Component {
             duration: duration.value,
             leader: leader.value,
             admin: admin.value,
+            id: new Date().getTime()
         };
         this.props.addProject(newProject);
         this.setState({ showModal: false });
@@ -44,6 +45,7 @@ class WidgetProjects extends React.Component {
 
     render () {
         const { projects } = this.props;
+        console.log(projects)
         return (    
             <div className="widgetProjects">
                 <div className="widgetProjects-top">
@@ -82,7 +84,7 @@ class WidgetProjects extends React.Component {
                
                     <div className="widgetProjects-cards">
                     { projects.map((project) => 
-                        <div className="widgetProjects-cards_card">
+                        <div className="widgetProjects-cards_card" key={project.id}>
                             <CardProject project={project}/>
                         </div>
                         )
